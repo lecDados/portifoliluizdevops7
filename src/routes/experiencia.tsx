@@ -27,7 +27,6 @@ const skills = [
 const languages = [
   { name: "Português", v: 100 },
   { name: "Inglês (Iniciante)", v: 35 },
-  { name: "Inglês (Intermediário em andamento)", v: 55 },
 ];
 
 const projects = [

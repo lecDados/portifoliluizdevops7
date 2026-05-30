@@ -22,6 +22,8 @@ const skills = [
   { name: "MySQL", v: 80 },
   { name: "PostgreSQL", v: 75 },
   { name: "Docker", v: 70 },
+  { name: "React", v: 35 },
+  { name: "NestJS", v: 15 },
 ];
 
 const languages = [

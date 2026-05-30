@@ -77,3 +77,12 @@
   }
   .text-accent-blue { color: var(--color-primary); }
 }
+#lovable-badge-cta{
+display: none !important;
+}
+[id*="ovable-badge-cta"] {
+  display: none !important;
+}
+[id^="lovable"] {
+  display: none !important;
+}

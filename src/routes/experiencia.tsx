@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { motion } from "framer-motion";
+import { Github } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import bg from "@/assets/experience-bg.jpg";
 
@@ -108,6 +109,15 @@ function Experiencia() {
                 </div>
               ))}
             </div>
+            <a
+              href="https://github.com/lecDados"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 glass rounded-full px-5 py-2.5 text-sm font-medium text-foreground/90 hover:bg-primary/10 hover:text-accent-blue transition-colors"
+            >
+              <Github className="w-4 h-4" />
+              Ver no GitHub
+            </a>
           </motion.div>
 
           {/* Right column */}

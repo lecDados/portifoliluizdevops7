@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import { Instagram, Linkedin, Github } from "lucide-react";
+import { Instagram, Linkedin, Github, Boxes, FileSpreadsheet, MessageCircle } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import heroImage from "@/assets/hero-setup.jpg";

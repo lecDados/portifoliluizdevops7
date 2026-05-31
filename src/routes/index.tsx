@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import { Instagram, Linkedin, Github } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import heroImage from "@/assets/hero-setup.jpg";
 
 export const Route = createFileRoute("/")({
@@ -95,6 +96,66 @@ function Home() {
             <Github className="w-5 h-5" />
           </a>
         </motion.div>
+      </section>
+
+      {/* Projects section */}
+      <section className="relative z-10 px-8 lg:px-24 py-20 max-w-7xl mx-auto w-full">
+        <motion.h3
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-sm tracking-[0.3em] font-semibold text-foreground/80 border-b border-primary/40 pb-2 mb-10 uppercase"
+        >
+          Projetos
+        </motion.h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Controle de Estoque",
+              desc: "Sistema completo para cadastro, gerenciamento e movimentação de produtos com Node.js, banco de dados e API REST.",
+            },
+            {
+              title: "Automação de Planilhas Excel",
+              desc: "Automação inteligente para leitura, processamento e geração de planilhas, reduzindo tarefas manuais.",
+            },
+            {
+              title: "Automação com Bot WhatsApp",
+              desc: "Bot automatizado para WhatsApp com envio de mensagens, respostas inteligentes e integrações.",
+            },
+          ].map((proj, i) => (
+            <motion.div
+              key={proj.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15, duration: 0.6 }}
+            >
+              <Card className="glass border border-white/10 bg-transparent h-full flex flex-col">
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-base font-semibold text-foreground tracking-wide">
+                    {proj.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-1 flex flex-col justify-between">
+                  <p className="text-sm text-foreground/70 leading-relaxed mb-6">
+                    {proj.desc}
+                  </p>
+                  <a
+                    href="https://github.com/lecDados"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 self-start rounded-full glass px-5 py-2.5 text-sm font-medium text-foreground/90 hover:bg-primary/10 hover:text-accent-blue transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    Ver no GitHub
+                  </a>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
       </section>
     </PageShell>
   );
